@@ -1,0 +1,15 @@
+# Define the allowed instance types
+allowed_instance_types = [
+    "t2.micro",
+    "t2.small",
+    "t2.medium"
+]
+
+# Get the list of resources from the Terraform plan
+main = rule {
+    all tfplan.resources.aws_instance as _, instances {
+        all instances as _, r {
+            allowed_instance_types contains r.applied.instance_type
+        }
+    }
+}
