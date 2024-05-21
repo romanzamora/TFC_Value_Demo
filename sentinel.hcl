@@ -1,5 +1,5 @@
 
- module {
+ module "tfplan-functions" {
    source = "mock-tfplan-v2.sentinel"
  }
  policy "restrict-aws-instance-type"{
