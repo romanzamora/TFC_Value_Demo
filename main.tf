@@ -15,7 +15,7 @@ terraform {
   required_version = ">= 1.2.0"
 
   cloud {
-    organization = "romanzamora-tfc-academy"
+    organization = "main_romanzamora"
 
     workspaces {
       name = "TFC_Value_Demo"
